@@ -1,0 +1,86 @@
+<head>
+  <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+<style>
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-color:black;
+}
+p{
+  font-size: 25px;
+  font-color:green;
+  text-align: left;
+}
+body{
+  background-color: lightblue;
+}
+table,th,td{
+  font-size: 25px;
+}
+
+.aligncenter {
+    text-align: left;
+}
+</style>
+<body>
+
+<p class="aligncenter">
+    <img src="<%= asset_path('home')%>"style="width:100%" alt="centered image" />
+
+</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.mobile %></td>
+        <td><%= user.email %></td>
+        <td><%= user.address %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<p>
+
+<%= link_to 'New User', new_user_path %>
+</p>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://www.facebook.com/AECaditya"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/aditya_engg_colleges/"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/AdityaEnggClg"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g"><i class="fa fa-youtube"></i></a>
+  
+
+
+  <p style="text-align:center; color:blue; font-size:15px" >
+  Aditya Engineering College © 2021 - All Rights Reserved
+  </p>  
+</footer>
+</body>
+</html>
+

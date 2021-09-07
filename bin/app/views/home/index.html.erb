@@ -1,0 +1,65 @@
+<head>
+	<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+<style>
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-color:black;
+}
+p{
+	font-size: 20px;
+	font-color:green;
+	text-align: center;
+}
+body{
+	background-color: lightblue;
+}
+
+.aligncenter {
+    text-align: left;
+}
+</style>
+<body>
+
+<p class="aligncenter">
+    <img src="<%= asset_path('home')%>"style="width:100%" alt="centered image" />
+
+</p>
+<br>
+<br>
+<br>
+<h1>Welcome To Aditya Engineering College</h1>
+<br>
+
+<p>
+<% if current_user %>
+ Logged in as <%= current_user.email %>.
+ <%= link_to 'Log Out', logout_path %>
+<% else %>
+ <%= link_to 'Sign Up', signup_path %> or
+ <%= link_to 'Log In', login_path %>
+<% end %>
+</p>
+<p id='notice'><%= notice %></p>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://www.facebook.com/AECaditya"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/aditya_engg_colleges/"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/AdityaEnggClg"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g"><i class="fa fa-youtube"></i></a>
+  
+
+
+  <p style="text-align:center; color:blue; font-size:15px" >
+  Aditya Engineering College © 2021 - All Rights Reserved
+  </p>  
+</footer>
+</body>
+</html>
+
+</body>

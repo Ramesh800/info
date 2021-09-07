@@ -1,0 +1,112 @@
+<head>
+  <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+<style>
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-color:black;
+}
+p{
+  font-size: 20px;
+  font-color:green;
+  text-align: left;
+}
+body{
+  background-color: lightblue;
+}
+
+.aligncenter {
+    text-align: left;
+}
+</style>
+<body>
+
+<p class="aligncenter">
+    <img src="<%= asset_path('home')%>"style="width:100%" alt="centered image" />
+
+</p>
+<br>
+<br>
+<br>
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <p>
+    <%= form.label :name %>
+  </p>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <p>
+
+    <%= form.label :mobile %>
+  </p>
+    <%= form.text_field :mobile %>
+  </div>
+
+  <div class="field">
+    <p>
+
+    <%= form.label :email %>
+  </p>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <p>
+    <%= form.label :password %>
+  </p>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <p>
+    <%= form.label :password_confirmation %>
+  </p>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <p>
+    <%= form.label :address %>
+  </p>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://www.facebook.com/AECaditya"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/aditya_engg_colleges/"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/AdityaEnggClg"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g"><i class="fa fa-youtube"></i></a>
+  
+
+
+  <p style="text-align:center; color:blue; font-size:15px" >
+  Aditya Engineering College © 2021 - All Rights Reserved
+  </p>  
+</footer>
+</body>
+</html>
+

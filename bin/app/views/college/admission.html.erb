@@ -1,0 +1,210 @@
+<html>
+<head>
+
+  <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("C:/Users/91954/project/public/campus2.jpg");
+
+
+
+  min-height: 450px;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.aligncenter {
+    text-align:;
+}
+
+
+/* Add styles to the form container */
+.container {
+  position:right;
+  right: 0;
+  margin: 20px;
+  max-width: 700px;
+  padding: 16px;
+  background-color: white;
+
+}
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+
+
+h1{  
+color:white; 
+text-align:center; 
+background-color:orange;  
+padding:5px;
+
+}  
+p{  
+color:blue; 
+font-size: 25px;
+}
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+td{
+  color:black;
+}
+</style>
+</head>
+<body>
+<nav class="w3-bar w3-orange">
+    <p>
+    <%= link_to "Contact", {:action=>'contact'} %>&nbsp; &nbsp;
+  <%= link_to "office@aec.edu.in"%>&nbsp; &nbsp;
+   <%= link_to "Admin", {:action=>'admin'} %>&nbsp; &nbsp;
+  
+
+  
+  
+
+</p>
+  </nav>
+	<br>
+	<nav class="w3-bar w3-black">
+    <p>
+  <%= link_to "Home", {:action=>'index'} %>&nbsp; &nbsp;
+  <%= link_to "Aboutus", {:action=>'aboutus'} %>&nbsp; &nbsp;
+  <%= link_to "Placements", {:action=>'placements'} %>&nbsp; &nbsp;
+  <%= link_to "CampusLife", {:action=>'campuslife' }%>&nbsp; &nbsp;
+  <%= link_to "Departments" ,{:action=>'departments' }%>&nbsp; &nbsp;
+  <%= link_to "Courses" ,{:action=>'courses'} %>&nbsp; &nbsp;
+  <%= link_to "Committees" ,{:action=>'committees'} %>&nbsp; &nbsp;
+
+
+</p>
+</nav>
+<div class="row">
+  <div class="column">
+    <p class="aligncenter">
+    <img src="<%= asset_path('campus2')%>"style="width:100%" alt="centered image" />
+</p>
+  </div>
+  <div class="column">
+   <!-- <form action="" class="container" >
+    <h1>registration</h1>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+     <label for=" father name"><b> fatherName</b></label>
+    <input type="text" placeholder="Enter fathername" name="name" required>
+    <label for=" address"><b> address</b></label>
+    <input type="text" placeholder="Enter address" name="name" required>
+    <label for=" mobile no"><b>mobileno</b></label>
+    <input type="text" placeholder="Enter mobile no" name="name" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="submit"  onClick="myFunction()" class="registerbtn">Register</button>
+</form>-->
+<h1>registration form</h1>
+<%= form_tag :action =>'create' do %>
+<p><label for="admission1_name">name:</label>
+  <%= text_field 'admission1s','name', :size=>"10"%></p>
+
+
+<p><label for="admission1_fathername">fathername:</label>
+  <%= text_field 'admission1s','fathername' %></p>
+  <p><label for="admission1_address">address:</label>
+  <%= text_field 'admission1s','address' %></p>
+  <p><label for="admission1_mobileno">mobileno:</label>
+  <%= text_field 'admission1s','mobileno' %></p>
+  
+  <p><label for="admission1_email">email:</label>
+  <%= text_field 'admission1s','email' %></p>
+  
+  <p><label for="admission1_password">password:</label>
+  <%= password_field 'admission1s','password' %></p>
+  
+
+
+  
+<%= submit_tag "submit", :onClick =>'myFunction();' %>
+<% end -%>
+
+
+
+</div>
+</div>
+<script>
+  function myFunction() {
+  alert("YOUR ADMISSION ENQUIRY HAS BEEN FORWARDED SUCCESSFULLY TO THE CONCERNED DEPARTMENT. KINDLY WAIT FOR THE ADMISSION COUNSELLORS TO GET BACK TO YOU.");
+}
+</script>
+
+
+
+</body>
+  </html>
+
+  
+
+
+
+

@@ -1,0 +1,330 @@
+<head>
+	<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+<style>
+
+
+h1{
+	color:orange;
+	text-align:center;
+	} 
+
+.ribbon-highlight{
+ 
+ padding:0.1em 0.2em;
+}
+hr{
+	color:orange;
+	width:70%;
+	margin-left:30;
+	margin-right:30;
+
+
+}
+
+
+
+
+
+	
+	body{
+		background-color: white;
+	}
+	table, td {
+		border:1px solid black;
+		margin-left:auto;
+		margin-right:auto;"
+
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color:white;
+  padding: 10px;
+  align-items: :center;  
+  } 
+  th{
+  	font-size: 20px;
+  	background-color:orange;
+  }
+.aligncenter {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+ 
+p{  
+color:blue; 
+font-size: 25px;
+}
+body{
+	background-image: url("C:/Users/91954/project/public/bg1.jpg");
+}
+</style>
+<body>
+
+	<nav class="w3-bar w3-orange">
+    <p>
+    
+    
+  <%= link_to "Contact", {:action=>'contact'} %>&nbsp; &nbsp;
+  <%= link_to "office@aec.edu.in"%>&nbsp; &nbsp;
+  
+  
+  
+   <%= link_to "Admin", {:action=>'admin'} %>&nbsp; &nbsp;
+  
+
+  
+  
+</p>
+  
+	</nav>
+	<br>
+	<nav class="w3-bar w3-black">
+    <p>
+  
+  <%= link_to "Home", {:action=>'index'} %>&nbsp; &nbsp;
+  <%= link_to "Aboutus", {:action=>'aboutus'} %>&nbsp; &nbsp;
+  <%= link_to "Placements", {:action=>'placements'} %>&nbsp; &nbsp;
+  <%= link_to "CampusLife", {:action=>'campuslife' }%>&nbsp; &nbsp;
+  <%= link_to "Departments" ,{:action=>'departments' }%>&nbsp; &nbsp;
+  <%= link_to "Courses" ,{:action=>'courses'} %>&nbsp; &nbsp;
+    <%= link_to "Committees" ,{:action=>'committees'} %>&nbsp; &nbsp;
+
+
+
+
+  
+
+
+  
+  
+ </p>
+</nav>
+
+<p class="aligncenter">
+    <img src="<%= asset_path('course')%>"style="width:100%" alt="centered image" />
+</p>
+
+
+<h1>UG COURSES</h1>
+<hr>
+<br> 
+
+
+
+
+
+<table style="align-self: center;">
+
+	<tr>
+
+		<th>Branch </th>
+		<th>Intake</th>
+		
+	</tr>
+<tr>
+	<td>Civil Engineering</td>
+	<td>120</td>
+	
+
+</tr>
+
+<tr>
+	<td>Electrical And Electronics Engineering</td>
+	<td>120</td>
+	
+
+</tr>
+<tr>
+	<td>Mechanical Engineering</td>
+	<td>180</td>
+	
+
+</tr>
+<tr>
+	<td>Electronics And Communication Engineering</td>
+	<td>240</td>
+	
+
+</tr>
+<tr>
+	<td>Petroleum Technology</td>
+	<td>60</td>
+	
+
+</tr>
+<tr>
+	<td>Computer Science And Engineering</td>
+	<td>180</td>
+	
+
+</tr>
+<tr>
+	<td>Mining Engineering</td>
+	<td>60</td>
+	
+
+</tr>
+<tr>
+	<td>Agricultural Engineering</td>
+	<td>60</td>
+	
+
+</tr>
+<tr>
+	<td>Information Technology</td>
+	<td>60</td>
+	
+
+</tr>
+
+</table>
+<h1>PG COURSES</h1>
+<hr>
+<br> 
+
+<table>
+	<tr>
+		<th>Course</th>
+		<th>Branch </th>
+		<th>Intake</th>
+	</tr>
+	<tr>
+
+
+		<td rowspan="8">M.Tech</td>
+		
+	
+	<td>Software Engineering</td>
+	<td>18</td>
+</tr>
+<tr>
+
+<td>VLSI Design</td>
+<td>36</td>
+
+</tr>
+<tr>
+  <td>Embedded Systems</td>
+  <td>18</td>
+</tr>
+<tr>
+	<td>Computer Science And Engineering</td>
+	<td>36</td>
+
+</tr>
+<tr>
+	<td>Structural Engineering</td>
+	<td>18</td>
+</tr>
+<td>Power Electronics And Drives</td>
+<td>18</td>
+</tr>
+<tr>
+	<td>Thermal Engineering</td>
+	<td>24</td>
+</tr>
+<tr>
+	<td>Petroleum Engineering</td>
+	<td>18</td>
+</tr>
+	<tr>
+		<td>M.B.A</td>
+		<td>Master Of Business Administration</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>Integrated MBA</td>
+		<td>Integrated Master Of Business Administration</td>
+		<td>60</td>
+	</tr>
+<tr>
+		<td>M.C.A</td>
+		<td>Master Of Computer Applications</td>
+		<td>60</td>
+	</tr>
+	<tr>
+
+		<td rowspan="2"></td>
+		<td>Total</td>
+		
+		<td>366</td>
+	</tr>
+</table>
+<h1>Diploma COURSES</h1>
+<hr>
+<br> 
+<table>
+	<tr>
+		<th>Branch</th>
+		<th>Intake</th>
+	</tr>
+	<tr>
+		<td>Diploma in Civil Engineering</td>
+		<td>120</td>
+	</tr>
+	<tr>
+		<td>Diploma In Electrical And Electronics Engineering</td>
+		<td>120</td>
+	</tr>
+	<tr>
+		<td>Diploma In Mechanical Engineering</td>
+		<td>120</td>
+	</tr>
+	<tr>
+		<td>Diploma In Electronics And Communication Engineering</td>
+		<td>120</td>
+	</tr>
+	<tr>
+		<td>Diploma In Computer Science Engineering</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>Diploma In Petroleum Engineering</td>
+		<td>60</td>
+	</tr>
+	<tr>
+		<td>Total</td>
+		<td>600</td>
+	</tr>
+</table>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://www.facebook.com/AECaditya"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/aditya_engg_colleges/"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/AdityaEnggClg"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UCQmzQy9b4i6Q6X86DkX1H1g"><i class="fa fa-youtube"></i></a>
+  
+
+
+  <p style="text-align:center; color:blue; font-size:15px" >
+  Aditya Engineering College © 2021 - All Rights Reserved
+  </p>  
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
